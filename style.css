@@ -7,26 +7,50 @@
 }
 .search{
     height:40vh;
-    position:relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    position:relative; 
 }
-.search-img{
+.search img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    position: absolute;
 }
 .search .content{
 color: #fff;
+text-align: center;
 position: relative;
 z-index: 2;
 }
 .search h1{
     font-size: 2.65rem;
-    margin-top: 8px;
+    font-weight: 600;
 }
 .search p{
     font-size: 1.5rem;
     margin-top: 8px;
+}
+.search .search-box{
+    height: 55px;
+    margin: 45px 0;
+    position: relative;
+}
+.search-box i{
+position:absolute;
+left: 20px;
+top: 50%;
+font-size: 1.4rem;
+color: #8d8d8d;
+transform: translateY(-50%);
+}
+.search-box input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    font-size: 1.1rem;
+    padding-left: 55px;
+    padding-radius:5px;
 }
