@@ -72,6 +72,7 @@ gap: 15px;
 }
 .images .card{
     display: flex;
+    overflow: hidden;
     position: relative;
     list-style: none;
     margin-bottom: 14px;
@@ -79,13 +80,17 @@ gap: 15px;
 }
 .images .card .details{
     position:absolute;
-    bottom: 0;
+    bottom: -100;
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content:space ;
+    justify-content:space-between ;
     padding: 15px 20px;
+    transition: bottom 0.1s ease;
     background: linear-gradient(to top, rgba(0,0,0,0,7),transparent);
+}
+.images .card:hover .details{
+    bottom: 0;
 }
 .card .details .photographer{
 color: #fff;
@@ -98,6 +103,12 @@ align-items: center;
 }
 .details .photographer span{
     font-size: 1.05rem; 
+ }
+ .card .details button{
+    cursor: pointer;
+    padding: 3px 8px;
+    font-size: 1.1rem;
+    background: #fff;
  }
 .images img{
     width: 100%;
