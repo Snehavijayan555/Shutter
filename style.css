@@ -45,6 +45,11 @@ font-size: 1.4rem;
 color: #8d8d8d;
 transform: translateY(-50%);
 }
+input,button,i{
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
 .search-box input{
     width: 100%;
     height: 100%;
@@ -53,4 +58,56 @@ transform: translateY(-50%);
     font-size: 1.1rem;
     padding-left: 55px;
     padding-radius:5px;
+}
+.gallery{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.gallery .images{
+columns: 5 340px;
+margin-top: 40px;
+max-width: 95%;
+gap: 15px;
+}
+.images .card{
+    display: flex;
+    position: relative;
+    list-style: none;
+    margin-bottom: 14px;
+    border-radius: 4px;
+}
+.images .card .details{
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:space ;
+    padding: 15px 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0,7),transparent);
+}
+.card .details .photographer{
+color: #fff;
+display: flex;
+align-items: center;
+}
+.details .photographer i{
+   font-size: 1.4rem; 
+   margin-right: 10px;
+}
+.details .photographer span{
+    font-size: 1.05rem; 
+ }
+.images img{
+    width: 100%;
+}
+.gallery  .load-more{
+margin: 50px 0;
+color: #fff;
+cursor: pointer;
+font-size: 1.2rem;
+padding: 12px 27px;
+background: #8a6cff;
+
 }
