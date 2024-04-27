@@ -38,20 +38,22 @@ const getImages = (apiURL) => {
       generateHTML(data.photos);
       loadMoreBtn.innerText="Load More";
     loadMoreBtn.classList.remove("disabled")
-    })
-    .catch((error) => {
-      console.error("Error fetching images:", error);
-    });
+    }).catch(() => 
+     alert("Failed to load images!"));
 };
 
 const loadMoreImages= () =>{
     // increment currentpage by 1
     currentPage++; 
+    // if search term has some value then call api with search term else call default api
     let apiURL=`https://api.pexels.com/v1/curated?page=${currentPage}&per_page=${perPage}`
+    apiURL = searchTerm ? `https://api.pexels.com/v1/search?query=${searchTerm}&page=${currentPage}&per_page=${perPage}` : apiURL
     getImages(apiURL);
 }
 
 const loadSearchImages = (e) => {
+    // if search input is empty set the search term else call default api
+    if(e.target.value === "")return searchTerm = null;
     // if pressed key is Enter (key code 13), update the current page, search term, and call the getImages
     if(e.key === "Enter"){
        currentPage = 1;
